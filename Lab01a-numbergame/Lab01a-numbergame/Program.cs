@@ -97,3 +97,28 @@ namespace Lab01a_numbergame //name of program-main method
         //Return the populated array
         return userIntArray;
     }
+
+   static int GetSum(int[] intArray)
+    {
+        // Declare an integer variable named sum
+        int sum = 0;
+
+        // Sum all elements of array
+        foreach (int element in intArray)
+    {
+        sum += element;
+    }
+
+        Console.WriteLine($"The sum of the numbers you entered is {sum}.");
+
+        // Condititional if throw custom exception is sum < 20
+        if (sum < 20)
+    {
+        throw new Exception($"Value of sum ({sum}) is too low.");
+    }
+        //return the sum
+        return sum;
+}
+
+
+
