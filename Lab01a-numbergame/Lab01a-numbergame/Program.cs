@@ -73,3 +73,27 @@ namespace Lab01a_numbergame //name of program-main method
     }
 }
 //Populate, GetSum, GetProduct,GetQuotient does not exist
+
+
+     //Populate method
+    static int[] Populate(int[] intArray)
+    {
+        // Empty integer array for user's input
+        int[] userIntArray = new int[intArray.Length];
+
+        // Iterate through the array and prompt the user to enter a specific number
+        for (int i = 0; i < intArray.Length; i++)
+    {
+        Console.WriteLine($"Enter number {i + 1} of {intArray.Length}.");
+        string userNumAsString = Console.ReadLine();
+
+        //method to convert the user’s input to an integer 
+        int userNumAsInt = Convert.ToInt32(userNumAsString);
+
+
+        // Add the number just inputted into the array
+        userIntArray[i] = userNumAsInt;
+    }
+        //Return the populated array
+        return userIntArray;
+    }
