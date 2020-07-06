@@ -72,3 +72,4 @@ namespace Lab01a_numbergame //name of program-main method
         Console.WriteLine(e.Message);
     }
 }
+//Populate, GetSum, GetProduct,GetQuotient does not exist
