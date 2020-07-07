@@ -147,6 +147,42 @@ namespace Lab01a_numbergame //name of program-main method
     }
 }
 
+//GetQuotient method
+    static decimal GetQuotient(int product)
+    {
+        Console.WriteLine($"Enter a number to divide your product {product} by.");
+
+        try
+    {
+        // Retrieve and store users number as a string
+        string divisorAsString = Console.ReadLine();
+
+
+        // Converting users number to decimal
+        decimal divisorAsDecimal = Convert.ToDecimal(divisorAsString);
+
+
+        // Converting the product argument from integer to decimal
+        decimal productAsDecimal = Convert.ToDecimal(product);
+
+
+        // Store the calculated quotient as decimal
+        decimal quotient = decimal.Divide(productAsDecimal, divisorAsDecimal);
+
+        //return the quotient
+        return quotient;
+    }
+        catch (DivideByZeroException e)
+    {
+        Console.WriteLine(e.Message);
+        return 0;
+    }
+}
+	    
+	
+
+
+
 
 
 
