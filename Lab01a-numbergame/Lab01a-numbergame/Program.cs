@@ -120,5 +120,34 @@ namespace Lab01a_numbergame //name of program-main method
         return sum;
 }
 
+    // GetProduct method
+    static int GetProduct(int[] intArray, int sum)
+{
+        Console.WriteLine($"User the select a random number between 1 and the length of the integer array and {intArray.Length}.");
+
+        try
+    {
+        // Declare variable for store user's random number 
+        string userPickAsString = Console.ReadLine();
+
+
+        // Converting users pick to integer
+        int userPickAsInt = (Convert.ToInt32(userPickAsString) - 1);
+
+        //Multiply sum by the random number index that the user selected from the array.
+        int product = intArray[userPickAsInt] * sum;
+
+        //Return the product variable.
+        return product;
+    }
+        catch (IndexOutOfRangeException e)
+    {
+        Console.WriteLine(e.Message);
+        throw;
+    }
+}
+
+
+
 
 
